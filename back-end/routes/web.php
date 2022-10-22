@@ -18,3 +18,5 @@ Route::get('/', function () {
 
     return \App\Models\Product::find(1)->productImages;
 });
+
+Route::get('shop/product/{id}', [App\Http\Controllers\Front\ShopController::class, 'show']);

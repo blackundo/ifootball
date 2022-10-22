@@ -2,6 +2,7 @@
 <html lang="zxx">
 
 <head>
+    <base href="{{asset('/')}}">
     <meta charset="UTF-8">
     <meta name="description" content="Fashi Template">
     <meta name="keywords" content="Fashi, unica, creative, html">
