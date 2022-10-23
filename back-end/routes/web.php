@@ -35,3 +35,11 @@ Route::prefix('checkout')->group(function () {
     Route::get('/vnPaycheck', [CheckOutController::class, 'vnPayCheck']);
     Route::get('/result', [CheckOutController::class, 'result']);
 });
+
+
+Route::prefix('account')->group(function () {
+    Route::get('login', [\App\Http\Controllers\Front\AccountController::class, 'login']);
+    Route::post('login', [\App\Http\Controllers\Front\AccountController::class, 'checkLogin']);
+
+    Route::get('logout', [\App\Http\Controllers\Front\AccountController::class, 'logout']);
+});
