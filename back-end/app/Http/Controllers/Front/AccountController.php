@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Service\User\UserService;
+use App\Utilities\Constant;
 
 class AccountController extends Controller
 {
@@ -25,7 +26,7 @@ class AccountController extends Controller
         $credentials = [
             'email' => $request->email,
             'password' => $request->password,
-            'level' => 2, //tài khoản câps đồ khách hàng bình thường
+            'level' => Constant::user_level_client, //tài khoản câps đồ khách hàng bình thường
         ];
 
         $remember = $request->remember;
@@ -58,7 +59,7 @@ class AccountController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'password' => bcrypt($request->password),
-            'level' => 2, //khách hàng thường
+            'level' => Constant::user_level_client, //khách hàng thường
         ];
 
         $this->userService->create($data);

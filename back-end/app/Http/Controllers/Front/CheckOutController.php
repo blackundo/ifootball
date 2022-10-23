@@ -10,6 +10,7 @@ use App\Repositories\OrderDetail\OrderDetailRepositoryInterface;
 use App\Utilities\VNPay;
 use Illuminate\Http\Request;
 use Gloudemans\Shoppingcart\Facades\Cart;
+use App\Utilities\Constant;
 use Illuminate\Support\Facades\Mail;
 
 class CheckOutController extends Controller
@@ -33,7 +34,11 @@ class CheckOutController extends Controller
     public function addOrder(Request $request)
     {
         //Thêm đơn hàng
-        $order = $this->orderService->create($request->all());
+        $data = $request->all();
+        $data['status'] = Constant::order_status_ReceiveOrders;
+        $order = $this->orderService->create($data);
+
+
         //Thêm chi tiết đơn hàng
         $carts = Cart::content();
 
@@ -91,6 +96,9 @@ class CheckOutController extends Controller
         //02 Kiểm tra giao dịch
         if ($vnp_ResponseCode != null) {
             if ($vnp_ResponseCode == 00) {
+                //cap nhat trang thai orders
+                $this->orderService->update(['status' => Constant::order_status_Paid], $vnp_TxnRef);
+
                 //Gửi mail
                 $total = Cart::total();
                 $subtotal = Cart::subtotal();

@@ -31,41 +31,44 @@
                             </div>
                             <h4>Biling Details</h4>
                             <div class="row">
+
+                                <input type="hidden" id="id" name="id" value="{{Auth::user()->id ?? ''}}">
+
                                 <div class="col-lg-6">
                                     <label for="fir">First Name<span>*</span></label>
-                                    <input type="text" id="fir" name="first_name">
+                                    <input type="text" id="fir" name="first_name" value="{{Auth::user()->name ?? ''}}">
                                 </div>
                                 <div class="col-lg-6">
                                     <label for="last">Last Name<span>*</span></label>
-                                    <input type="text" id="last" name="last_name">
+                                    <input type="text" id="last" name="last_name" value="de">
                                 </div>
                                 <div class="col-lg-12">
                                     <label for="cun-name">Company Name</label>
-                                    <input type="text" id="cun-name" name="company_name">
+                                    <input type="text" id="cun-name" name="company_name" value="{{Auth::user()->company_name ?? ''}}">
                                 </div>
                                 <div class="col-lg-12">
                                     <label for="cun">Country<span>*</span></label>
-                                    <input type="text" id="cun" name="country">
+                                    <input type="text" id="cun" name="country" value="{{Auth::user()->country ?? ''}}">
                                 </div>
                                 <div class="col-lg-12">
                                     <label for="street">Street Address<span>*</span></label>
-                                    <input type="text" id="street" class="street-first" name="street_address">
+                                    <input type="text" id="street" class="street-first" name="street_address" value="{{Auth::user()->street_address ?? ''}}">
                                 </div>
                                 <div class="col-lg-12">
                                     <label for="zip">Postcode / ZIP (optional)</label>
-                                    <input type="text" id="zip" name="postcode_zip">
+                                    <input type="text" id="zip" name="postcode_zip" value="{{Auth::user()->postcode_zip ?? ''}}">
                                 </div>
                                 <div class="col-lg-12">
                                     <label for="town">Town / City<span>*</span></label>
-                                    <input type="text" id="town" name="town_city">
+                                    <input type="text" id="town" name="town_city" value="{{Auth::user()->town_city ?? ''}}">
                                 </div>
                                 <div class="col-lg-6">
                                     <label for="email">Email Address<span>*</span></label>
-                                    <input type="text" id="email" name="email">
+                                    <input type="text" id="email" name="email" value="{{Auth::user()->email ?? ''}}">
                                 </div>
                                 <div class="col-lg-6">
                                     <label for="phone">Phone<span>*</span></label>
-                                    <input type="text" id="phone" name="phone">
+                                    <input type="text" id="phone" name="phone" value="{{Auth::user()->phone ?? ''}}">
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="create-item">

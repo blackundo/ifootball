@@ -27,6 +27,8 @@ class CreateOrdersTable extends Migration
             $table->string('phone');
             $table->string('payment_type');
 
+            $table->integer('status');
+
             $table->timestamps();
         });
     }
