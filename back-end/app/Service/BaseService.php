@@ -21,13 +21,16 @@ class BaseService implements ServiceInterface
     {
         return $this->repository->create($data);
     }
+
     public function update(array $data, $id)
     {
-        return $this->repository->update($data, $id);
+        $obj = $this->repository->find($id);
+        return $obj->update($data);
     }
 
     public function delete($id)
     {
-        return $this->repository->delete($id);
+        $obj = $this->repository->find($id);
+        return $obj->delete();
     }
 }
