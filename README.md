@@ -1,20 +1,8 @@
-<h1 align="center">Welcome to readme-md-generator 👋</h1>
+<h1 align="center">Welcome to Project Laravel 👋</h1>
 <p align="center">
-  <img src="https://img.shields.io/npm/v/readme-md-generator.svg?orange=blue" />
-  <a href="https://www.npmjs.com/package/readme-md-generator">
-    <img alt="downloads" src="https://img.shields.io/npm/dm/readme-md-generator.svg?color=blue" target="_blank" />
-  </a>
-  <a href="https://github.com/kefranabg/readme-md-generator/blob/master/LICENSE">
-    <img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-yellow.svg" target="_blank" />
-  </a>
-  <a href="https://codecov.io/gh/kefranabg/readme-md-generator">
-    <img src="https://codecov.io/gh/kefranabg/readme-md-generator/branch/master/graph/badge.svg" />
-  </a>
-  <a href="https://github.com/frinyvonnick/gitmoji-changelog">
-    <img src="https://img.shields.io/badge/changelog-gitmoji-brightgreen.svg" alt="gitmoji-changelog">
-  </a>
-  <a href="https://twitter.com/FranckAbgrall">
-    <img alt="Twitter: FranckAbgrall" src="https://img.shields.io/twitter/follow/FranckAbgrall.svg?style=social" target="_blank" />
+  <img alt="Version" src="https://img.shields.io/badge/version-1.0.1-blue.svg?cacheSeconds=2592000" />
+  <a href="https://twitter.com/BlackRoseTVN" target="_blank">
+    <img alt="Twitter: BlackRoseTVN" src="https://img.shields.io/twitter/follow/BlackRoseTVN.svg?style=social" />
   </a>
 </p>
 
@@ -42,9 +30,9 @@ Chúng em mong nhận được sự góp ý, đánh giá của thầy(cô) và t
 
 ## 👨‍🦰 Thành viên đóng góp code cho dự án
 
-Dự án này tồn tại là nhờ tất cả những người đóng góp. [[Đóng góp](CONTRIBUTING.md)].
-<a href="https://github.com/blackundo/ifootball/graphs/contributors"><img src="https://opencollective.com/readme-md-generator/contributors.svg?width=890&button=false" /></a>
+Dự án này tồn tại là nhờ tất cả những người đóng góp.
 
+![contributors](https://user-images.githubusercontent.com/81552488/197401509-e436fa3e-96d5-4f36-b971-90dec7d4424c.svg)
 
 ## 📝 Giấy phép
 
