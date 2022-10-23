@@ -25,6 +25,7 @@ class CreateOrdersTable extends Migration
             $table->string('town_city');
             $table->string('email');
             $table->string('phone');
+            $table->string('payment_type');
 
             $table->timestamps();
         });

@@ -1089,6 +1089,9 @@ ol {
 .filter-control ul li.active {
 	color: #171717;
 }
+.filter-control ul li:hover{
+    color: #171717;
+}
 
 .filter-control ul li.active:before {
 	opacity: 1;
@@ -2009,7 +2012,6 @@ ol {
 	position: absolute;
 	right: 48px;
 	top: 0;
-	content: "09";
 	font-size: 16px;
 	color: #252525;
 }
@@ -2497,6 +2499,28 @@ ol {
 	background: #252525;
 	border-radius: 50%;
 }
+.specification-table table tr td .cs-black {
+    background: #252525;
+}
+.specification-table table tr td .cs-red {
+    background: #dc3232;
+}
+.specification-table table tr td .cs-blue {
+    background: #2773be;
+}
+.specification-table table tr td .cs-green {
+    background: #81d742;
+}
+.specification-table table tr td .cs-yellow{
+    background: #eeee21;
+}
+.specification-table table tr td cs-violet{
+    background: #8230e3;
+}
+
+
+
+
 
 .customer-review-option {
 	padding-top: 55px;
@@ -4309,4 +4333,41 @@ ol {
 		padding-left: 15px;
 		padding-right: 15px;
 	}
+}
+
+/* Rating */
+
+.rate {
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+}
+.rate:not(:checked) > input {
+    display: none;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
 }

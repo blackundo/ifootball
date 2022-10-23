@@ -67,6 +67,7 @@ class CheckOutController extends Controller
                 'vnp_OrderInfo' => 'Thanh toán nhanh...',
                 'vnp_Amount' => Cart::total(0, '', '') * 23123
             ]);
+            //chuyển hướng tới URL lấy được
             return redirect()->to($data_url);
         }
     }
@@ -75,7 +76,7 @@ class CheckOutController extends Controller
     {
         $email_to = $order->email;
         Mail::send('front.checkout.email', compact('order', 'subtotal', 'total'), function ($message) use ($email_to) {
-            $message->from('vuvietquyacn@gmail.com', 'Vũ Viết Quý');
+            $message->from('blackundovn@gmail.com', 'Black Undo');
             $message->to($email_to, $email_to);
             $message->subject('Order Notification');
         });
@@ -84,9 +85,9 @@ class CheckOutController extends Controller
     public function vnPayCheck(Request $request)
     {
         //01 lấy data từ URL do VNPay gửi về
-        $vnp_ResponseCode = $request->get('vnp_ResponseCode');
-        $vnp_TxnRef = $request->get('vnp_TxnRef');
-        $vpn_Amount = $request->get('vpn_Amount');
+        $vnp_ResponseCode = $request->get('vnp_ResponseCode'); //mã phản hồi kết quá thanh toán 00= thành công
+        $vnp_TxnRef = $request->get('vnp_TxnRef'); //order_id
+        $vpn_Amount = $request->get('vpn_Amount'); //số tiền thành toán
         //02 Kiểm tra giao dịch
         if ($vnp_ResponseCode != null) {
             if ($vnp_ResponseCode == 00) {
@@ -100,8 +101,14 @@ class CheckOutController extends Controller
                 //Thông báo kết quả
                 return "Thành công";
             } else {
-                Order::find($vnp_TxnRef)->delete();
-                return redirect('checkout/result')->with('notification', 'Lỗi thanh toán');
+                // Order::find($vnp_TxnRef)->delete();
+                // return redirect('checkout/result')->with('notification', 'Lỗi thanh toán');
+
+                //xoá đơn hàng đã thêm vào dattabase
+                $this->orderService->delete($vnp_TxnRef);
+
+                //thông báo lỗi
+                return redirect('checkout/result')->with('notification', 'Error: payment failed or cancelled');
             }
         }
     }

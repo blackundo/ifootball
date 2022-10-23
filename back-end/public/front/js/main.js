@@ -56,7 +56,7 @@
         Product Slider
     --------------------*/
    $(".product-slider").owlCarousel({
-        loop: true,
+        loop: false,
         margin: 25,
         nav: true,
         items: 4,
@@ -119,7 +119,7 @@
         autoHeight: false,
         autoplay: true,
     });
-    
+
     /*------------------
         CountDown
     --------------------*/
@@ -140,7 +140,7 @@
     // For demo preview end
 
     console.log(timerdate);
-    
+
 
     // Use this for real timer date
     /* var timerdate = "2020/01/01"; */
@@ -149,9 +149,9 @@
         $(this).html(event.strftime("<div class='cd-item'><span>%D</span> <p>Days</p> </div>" + "<div class='cd-item'><span>%H</span> <p>Hrs</p> </div>" + "<div class='cd-item'><span>%M</span> <p>Mins</p> </div>" + "<div class='cd-item'><span>%S</span> <p>Secs</p> </div>"));
     });
 
-        
+
     /*----------------------------------------------------
-     Language Flag js 
+     Language Flag js
     ----------------------------------------------------*/
     $(document).ready(function(e) {
     //no use
@@ -182,12 +182,15 @@
 		minamount = $("#minamount"),
 		maxamount = $("#maxamount"),
 		minPrice = rangeSlider.data('min'),
-		maxPrice = rangeSlider.data('max');
+		maxPrice = rangeSlider.data('max'),
+        minValue = rangeSlider.data('min-value') != '' ? rangeSlider.data('min-value') : minPrice,
+        maxValue = rangeSlider.data('max-value') != '' ? rangeSlider.data('max-value') : maxPrice
+
 	    rangeSlider.slider({
 		range: true,
 		min: minPrice,
         max: maxPrice,
-		values: [minPrice, maxPrice],
+		values: [minValue, maxValue],
 		slide: function (event, ui) {
 			minamount.val('$' + ui.values[0]);
 			maxamount.val('$' + ui.values[1]);
@@ -203,7 +206,7 @@
         $(".fw-size-choose .sc-item label, .pd-size-choose .sc-item label").removeClass('active');
         $(this).addClass('active');
     });
-    
+
     /*-------------------
 		Nice Select
     --------------------- */
@@ -224,7 +227,7 @@
 	});
 
     $('.product-pic-zoom').zoom();
-    
+
     /*-------------------
 		Quantity change
 	--------------------- */
@@ -245,6 +248,61 @@
 			}
 		}
 		$button.parent().find('input').val(newVal);
+        //Update Cart
+        const $rowId = $button.parent().find('input').data('rowid');
+        updateCart($rowId,newVal);
+
 	});
 
+    function updateCart(rowId,qty){
+        $.ajax({
+            type :"GET",
+            url:"cart/update",
+            data:{
+                rowId,
+                qty
+            },
+            success:function (response){
+                console.log(response)
+            },
+            error:function (err){
+                alert("update fail")
+            }
+        })
+    }
+
+
+
+
+
+    /*-------------------
+		Product-filter Index
+	--------------------- */
+    const product_men = $('.product-slider.men')
+    const product_women = $('.product-slider.women')
+
+    $('.filter-control').on('click','.item',function (){
+        const $item = $(this);
+        const  filter = $item.data('tag')
+        const category = $item.data('category')
+
+        $item.siblings().removeClass('active');
+        $item.addClass('active');
+
+        if(category=='men'){
+            product_men.owlcarousel2_filter(filter)
+        }
+        if(category=='women'){
+            product_women.owlcarousel2_filter(filter)
+
+        }
+    })
+
 })(jQuery);
+
+
+function destroyCart(){
+    fetch('./cart/destroy').then(function (data){
+        location.reload();
+    })
+}
