@@ -2,7 +2,7 @@
 
 namespace App\Repositories;
 
-abstract class BaseRepositories implements RepositoriesInterface
+abstract class BaseRepository implements RepositoryInterface
 {
     protected $model;
 
@@ -19,24 +19,26 @@ abstract class BaseRepositories implements RepositoriesInterface
     {
         return $this->model->all();
     }
-    public function find(int $id)
+
+    public function find($id)
     {
-        return $this->model->findOrFail($id);
+        return $this->model->find($id);
     }
+
     public function create(array $data)
     {
         return $this->model->create($data);
     }
+
     public function update(array $data, $id)
     {
-        $object = $this->model->find($id);
-
-        return $object->update($data);
+        $obj = $this->find($id);
+        return $obj->update($data);
     }
+
     public function delete($id)
     {
-        $object = $this->model->find($id);
-
-        return $object->delete();
+        $obj = $this->find($id);
+        return $obj->delete($id);
     }
 }

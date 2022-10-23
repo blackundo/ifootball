@@ -13,8 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('front.index');
-});
+// Route::get('/', function () {
+//     return view('front.index');
+// });
 
-Route::get('shop/product/{id}', [App\Http\Controllers\Front\ShopController::class, 'show']);
+Route::get('/', function (\App\Repositories\Product\ProductRepositoryInterface $productRepository) {
+    return $productRepository->all();
+});
