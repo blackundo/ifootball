@@ -13,10 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('front.index');
-// });
-
-Route::get('/', function (\App\Repositories\Product\ProductRepositoryInterface $productRepository) {
-    return $productRepository->all();
+Route::get('/', function () {
+    return view('front.index');
 });
+
+// Route::get('/', function (\App\Repositories\Product\ProductRepositoryInterface $productRepository) {
+//     return $productRepository->all();
+// });
