@@ -9,9 +9,6 @@
 
 ## 👋 Lời giới thiệu <br/> 
 
-  <img alt="downloads" style="display: block; 
-  height: 700px;
-  width: 1000px;" src="https://static.ecosite.vn/5093/news/2017/07/04/sayhello-edited-dribbble-1499164778.gif?color=blue" target="_blank" />
 
 
 
