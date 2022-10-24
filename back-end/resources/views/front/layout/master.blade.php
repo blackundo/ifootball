@@ -61,10 +61,10 @@
 
                     <div class="lan-selector">
                         <select class="language_drop" name="countries" id="countries" style="width:300px;">
-                            <option value='yt' data-image="front/img/flag-1.jpg" data-imagecss="flag yt"
-                                data-title="English">English</option>
-                            <option value='yu' data-image="front/img/flag-2.jpg" data-imagecss="flag yu"
-                                data-title="Bangladesh">German </option>
+                            <option value='yt' data-image="front/img/flag-2.jpg" data-imagecss="flag yt"
+                                data-title="English">Việt</option>
+                            <option value='yu' data-image="front/img/flag-1.jpg" data-imagecss="flag yu"
+                                data-title="Bangladesh">English </option>
                         </select>
                     </div>
                     <div class="top-social">
@@ -82,7 +82,7 @@
                 <div class="row">
                     <div class="col-lg-2 col-md-2">
                         <div class="logo">
-                            <a href="index.html">
+                            <a href="/">
                                 <img src="front/img/logo.png" height="25" alt="">
                             </a>
                         </div>
@@ -161,7 +161,7 @@
                             <li ><a href="#">Men's colothing</a></li>
                             <li ><a href="#">Underwear</a></li>
                             <li ><a href="#">Kid's clothing</a></li>
-                            <li ><a href="#">Brand codeleanon</a></li>
+                            <li ><a href="#">Brand BlackUndoon</a></li>
                             <li ><a href="#">Accessories/Shoes</a></li>
                             <li ><a href="#">Luxury Brands</a></li>
                             <li ><a href="#">Brand outdoor apparel</a></li>
@@ -183,6 +183,7 @@
                         <li class="{{(request()->segment(1)=='contact') ? 'active' : ''}}"><a href="./contact">Contact</a></li>
                         <li><a href="">Pages</a>
                             <ul class="dropdown">
+                                <li><a href="./account/my-order">My order</a></li>
                                 <li><a href="blog-details.html">Blog Details</a></li>
                                 <li><a href="./cart">Shopping Cart</a></li>
                                 <li><a href="check-out.html">Checkout</a></li>
@@ -241,14 +242,14 @@
                 <div class="col-lg-3">
                     <div class="footer-left">
                         <div class="footer-logo">
-                            <a href="index.html">
+                            <a href="/">
                                 <img src="front/img/footer-logo.png" height="25" alt="">
                             </a>
                         </div>
                         <ul>
-                            <li>1A Yet Kieu - Ha Noi</li>
-                            <li>Phone: 0326459773</li>
-                            <li>Email: vuvietquyacn@gmail.com</li>
+                            <li>Hoà Xuân, Cẩm lệ</li>
+                            <li>Phone: 0905000422</li>
+                            <li>Email: blackundovn@gmail.com</li>
                         </ul>
                         <div class="footer-social">
                             <a href="#"><i class="fa fa-facebook"></i></a>
@@ -299,7 +300,7 @@
                         <div class="copyright-text">
                             Copyright ©<script>document.write(new Date().getFullYear() );</script>
                             All rights reserved I this template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by
-                            <a href="https://CodeLean.vn" target="_blank">CodeLean</a>
+                            <a href="https://BlackUndo.vn" target="_blank">BlackUndo</a>
                         </div>
                         <div class="payment-pic">
                             <img src="front/img/payment-method.png" alt="">

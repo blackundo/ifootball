@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="Description" content="Enter your description here"/>
-    <title>Order Notification | CodeLean eCommerce</title>
+    <title>Order Notification | BlackUndo eCommerce</title>
 </head>
 
 <body
@@ -32,7 +32,7 @@
                 </h1>--}}
                 <h1 class="pl-2"
                     style="color: orange; line-height: 30px; float: left; padding-left: 20px; font-size: 40px; font-weight: 500;">
-                    CodeLean eCommerce
+                    BlackUndo eCommerce
                 </h1>
             </div>
 
@@ -184,7 +184,7 @@
                         <p>You can refer to the Help Center page or contact the store by leaving a message at the
                             Contact page or mailing here. Hotline 1900 9999 (8:00 - 9:00 both Saturday and Sunday).</p>
 
-                        <b>CodeLean thank you.</b>
+                        <b>BlackUndo thank you.</b>
                     </div>
                 </div>
             </div>

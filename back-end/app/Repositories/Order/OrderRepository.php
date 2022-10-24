@@ -12,6 +12,6 @@ class OrderRepository extends BaseRepository implements OrderRepositoryInterface
 
     public function getModel()
     {
-       return Order::class;
+        return Order::class;
     }
 }

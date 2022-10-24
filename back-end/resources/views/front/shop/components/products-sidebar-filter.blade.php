@@ -1,6 +1,6 @@
 <form action="shop">
     <div class="filter-widget">
-        <h4 class="fw-title">Categories</h4>
+        <h4 class="fw-title">Loại</h4>
         <ul class="filter-catagories">
             @foreach($categories as $categorie)
                 <li><a href="shop/{{$categorie->name}}">{{$categorie->name}}</a></li>
@@ -8,7 +8,7 @@
         </ul>
     </div>
     <div class="filter-widget">
-        <h4 class="fw-title">Brand</h4>
+        <h4 class="fw-title">Thương hiệu</h4>
         <div class="fw-brand-check">
             @foreach($brands as $brand)
                 <div class="bc-item">
@@ -26,7 +26,7 @@
         </div>
     </div>
     <div class="filter-widget">
-        <h4 class="fw-title">Price</h4>
+        <h4 class="fw-title">Giá</h4>
         <div class="filter-range-wrap">
             <div class="range-slider">
                 <div class="price-input">
@@ -45,9 +45,9 @@
                 <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"></span>
             </div>
         </div>
-        <button type="submit" class="filter-btn">Filter</button>
+        <button type="submit" class="filter-btn">Lọc</button>
     </div>
-    <div class="filter-widget">
+    {{-- <div class="filter-widget">
         <h4 class="fw-title">Color</h4>
         <div class="fw-color-choose">
             <div class="cs-item">
@@ -139,7 +139,7 @@
                 <label for="xxs-size">xxs</label>
             </div>
         </div>
-    </div>
+    </div> --}}
 {{--    <div class="filter-widget">--}}
 {{--        <h4 class="fw-title">Tags</h4>--}}
 {{--        <div class="fw-tags">--}}

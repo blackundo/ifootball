@@ -49,7 +49,7 @@
                             <div class="product-details">
                                 <div class="pd-title">
                                     <span>oranges</span>
-                                    <h3>Pure Pineapple</h3>
+                                    <h3>{{$product->name}}</h3>
                                     <a href="#" class="heart-icon"><i class="icon_heart_alt"></i></a>
                                 </div>
                                 <div class="pd-rating">
@@ -71,7 +71,7 @@
                                     @endif
 
                                 </div>
-                                <div class="pd-color">
+                                {{-- <div class="pd-color">
                                     <h6>Color</h6>
                                     <div class="pd-color-choose">
                                         @foreach(array_unique(array_column($product->productDetails->toArray(),'color')) as $productColor)
@@ -83,7 +83,7 @@
 
 
                                     </div>
-                                </div>
+                                </div> --}}
                                 <div class="pd-size-choose">
 
                                     @foreach(array_unique(array_column($product->productDetails->toArray(),'size')) as $productSize )

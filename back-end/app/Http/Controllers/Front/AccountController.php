@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Service\User\UserService;
 use App\Utilities\Constant;
+use App\Http\Middleware\CheckMemberLogin;
 
 class AccountController extends Controller
 {
@@ -32,7 +33,8 @@ class AccountController extends Controller
         $remember = $request->remember;
 
         if (Auth::attempt($credentials, $remember)) {
-            return redirect(''); //trang chủ
+            // return redirect(''); //trang chủ
+            return redirect()->intended(''); //mac dinh la trung chu
         } else {
             return back()->with('notification', 'Lỗi: Email hoặc mật khẩu sai');
         }
@@ -65,5 +67,10 @@ class AccountController extends Controller
         $this->userService->create($data);
 
         return redirect('account/login')->with('notification', 'Đăng ký thành công, vui lòng đăng nhập');
+    }
+
+    public function myOrderIndex()
+    {
+        return view('front.account.my-order.index');
     }
 }

@@ -9,10 +9,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-5">
-                        <span>Bag,kids</span>
+                        <span>Nike,Adidas</span>
                         <h1>Black Friday</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipicising elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore</p>
+                        <p>Giảm giá cực sốc. Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum voluptatem sunt expedita totam </p>
                         <a href="#" class="primary-btn">Shop Now</a>
                     </div>
                 </div>
@@ -40,7 +39,7 @@
     </div>
 </section>
 
-<div class="banner-section spad">
+{{-- <div class="banner-section spad">
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-4">
@@ -69,14 +68,14 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 
 <section class="women-banner spad">
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-3">
-                <div class="product-large set-bg" data-setbg="front/img/products/women-large.jpg">
-                    <h2>Women's</h2>
+                <div style="background-color:#eceef0" class="product-large set-bg" >
+                    <h2>Adidas</h2>
                     <a href="#">Discover More</a>
                 </div>
             </div>
@@ -107,7 +106,7 @@
         <div class="col-lg-6 text-center">
             <div class="section-title">
                 <h2>Deal Of The Week</h2>
-                <p>abcxyz cô viết tiếng Đức tiếng Pháp nên em chịu thôi :'(</p>
+                <p>Balo đựng giày thể thao, quần áo</p>
                 <div class="product-price">
                     $35.00
                     <span>HandBag</span>
@@ -131,12 +130,12 @@
                     <p>Seconds</p>
                 </div>
             </div>
-            <a href="" class="primary-btn">Shop Now</a>
+            <a href="" class="primary-btn">Mua ngay</a>
         </div>
     </div>
 </section>
 
-<section class="man-banner spad">
+{{-- <section class="man-banner spad">
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-8 ">
@@ -163,43 +162,43 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 
 <div class="instagram-photo">
     <div class="insta-item set-bg" data-setbg="front/img/insta-1.jpg">
         <div class="inside-text">
             <i class="ti-instagram"></i>
-            <h5><a href="#">CodeLean_Collection</a></h5>
+            <h5><a href="#">BlackUndo_Collection</a></h5>
         </div>
     </div>
     <div class="insta-item set-bg" data-setbg="front/img/insta-2.jpg">
         <div class="inside-text">
             <i class="ti-instagram"></i>
-            <h5><a href="#">CodeLean_Collection</a></h5>
+            <h5><a href="#">BlackUndo_Collection</a></h5>
         </div>
     </div>
     <div class="insta-item set-bg" data-setbg="front/img/insta-3.jpg">
         <div class="inside-text">
             <i class="ti-instagram"></i>
-            <h5><a href="#">CodeLean_Collection</a></h5>
+            <h5><a href="#">BlackUndo_Collection</a></h5>
         </div>
     </div>
     <div class="insta-item set-bg" data-setbg="front/img/insta-4.jpg">
         <div class="inside-text">
             <i class="ti-instagram"></i>
-            <h5><a href="#">CodeLean_Collection</a></h5>
+            <h5><a href="#">BlackUndo_Collection</a></h5>
         </div>
     </div>
     <div class="insta-item set-bg" data-setbg="front/img/insta-5.jpg">
         <div class="inside-text">
             <i class="ti-instagram"></i>
-            <h5><a href="#">CodeLean_Collection</a></h5>
+            <h5><a href="#">BlackUndo_Collection</a></h5>
         </div>
     </div>
     <div class="insta-item set-bg" data-setbg="front/img/insta-6.jpg">
         <div class="inside-text">
             <i class="ti-instagram"></i>
-            <h5><a href="#">CodeLean_Collection</a></h5>
+            <h5><a href="#">BlackUndo_Collection</a></h5>
         </div>
     </div>
 </div>

@@ -20,8 +20,8 @@ class DatabaseSeeder extends Seeder
         DB::table('users')->insert([
             [
                 'id' => 1,
-                'name' => 'CodeLean',
-                'email' => 'CodeLean@gmail.com',
+                'name' => 'BlackUndo',
+                'email' => 'BlackUndo@gmail.com',
                 'password' => Hash::make('123456'),
                 'avatar' => null,
                 'level' => 2,
@@ -90,7 +90,7 @@ class DatabaseSeeder extends Seeder
                 'title' => 'This was one of our first days in Hawaii last week.',
                 'subtitle' => 'The Personality Trait That Makes People Happier',
                 'image' => 'blog-2.jpg',
-                'category' => 'CodeLeanON',
+                'category' => 'BlackUndoON',
                 'content' => '',
             ],
             [
@@ -106,7 +106,7 @@ class DatabaseSeeder extends Seeder
                 'title' => 'Happppppy New Year! I know I am a little late on this post',
                 'subtitle' => 'The Personality Trait That Makes People Happier',
                 'image' => 'blog-4.jpg',
-                'category' => 'CodeLeanON',
+                'category' => 'BlackUndoON',
                 'content' => '',
             ],
             [
@@ -122,7 +122,7 @@ class DatabaseSeeder extends Seeder
                 'title' => 'Writing has always been kind of therapeutic for me',
                 'subtitle' => 'The Personality Trait That Makes People Happier',
                 'image' => 'blog-6.jpg',
-                'category' => 'CodeLeanON',
+                'category' => 'BlackUndoON',
                 'content' => '',
             ],
         ]);
